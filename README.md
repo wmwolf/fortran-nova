@@ -1,46 +1,73 @@
-<!--
-👋 Hello! As Nova users browse the extensions library, a good README can help them understand what your extension does, how it works, and what setup or configuration it may require.
+# Fortran Language Extension for Nova
 
-Not every extension will need every item described below. Use your best judgement when deciding which parts to keep to provide the best experience for your new users.
+**Fortran** provides comprehensive language support for free-form Fortran (F90 and later) in the Nova editor, powered by [tree-sitter-fortran](https://github.com/stadelmanma/tree-sitter-fortran).
 
-💡 Quick Tip! As you edit this README template, you can preview your changes by selecting **Extensions → Activate Project as Extension**, opening the Extension Library, and selecting "fortran" in the sidebar.
+## Features
 
-Let's get started!
--->
+- **Syntax Highlighting** - Full syntax highlighting for modern Fortran including keywords, types, operators, functions, subroutines, and more
+- **Symbol Navigation** - Quick navigation to programs, modules, subroutines, functions, and derived types via the symbol list (⌘P)
+- **Code Folding** - Fold major code blocks including programs, modules, functions, subroutines, loops, and conditionals
+- **Smart Indentation** - Automatic indentation for Fortran block structures
+- **Comment Support** - Proper handling of Fortran comment syntax with `!`
 
-<!--
-🎈 Include a brief description of the features your syntax extension provides. For example:
--->
+## Supported File Types
 
-**fortran** provides syntax highlighting and autocompletion for **An Important Language**.
+This extension automatically activates for the following file types:
 
-<!--
-🎈 It can also be helpful to include a screenshot or GIF showing your extension in action:
--->
-
-![](https://nova.app/images/en/dark/editor.png)
+- `.f`, `.f90`, `.f95`, `.f03`, `.f08` - Fortran source files
+- `.dek` - MESA deck files
+- `.inc` - Include files
+- `inlist*` - MESA inlist files (namelist files with no extension)
 
 ## Language Support
 
-<!--
-🎈 Whether your extension covers the entirety of a language's syntax or a subset, it can be helpful to describe that for users:
--->
+This extension supports **free-form Fortran (Fortran 90 and later)**. Key supported features include:
 
-fortran currently supports the following features of Important Language:
+- Program, module, and submodule structures
+- Subroutine and function definitions
+- Derived type definitions
+- Interface blocks
+- Control structures (if/else, select case, do loops, where)
+- Intrinsic types and operators
+- Array syntax and operations
+- Procedure calls
 
-- Lorem
-- Ipsum
-- Dolor
+**Note:** Fixed-form Fortran (FORTRAN 77 and earlier) is not currently supported.
 
-Support for:
+## Limitations
 
-- Sit
-- Amet 
+- This is a syntax-only extension and does not include Language Server Protocol (LSP) support
+- For advanced features like auto-completion, refactoring, and diagnostics, consider using [fortls](https://fortls.fortran-lang.org/) with an LSP client
 
-is planned for a future update.
+## Installation
 
-<!--
-👋 That's it! Happy developing!
+### From the Nova Extension Library
 
-P.S. If you'd like, you can remove these comments before submitting your extension 😉
--->
+1. Open Nova
+2. Go to **Extensions → Extension Library**
+3. Search for "Fortran"
+4. Click **Install**
+
+### Manual Installation
+
+1. Download the latest release from [GitHub](https://github.com/wmwolf/fortran-nova)
+2. Double-click the `.novaextension` file to install
+
+## Credits
+
+This extension was built with [Claude Code](https://claude.com/claude-code), Anthropic's AI-powered coding assistant, which was instrumental in:
+
+- Compiling the tree-sitter parser for Nova's architecture
+- Creating comprehensive syntax highlighting queries
+- Implementing symbol navigation and code folding
+- Setting up the complete extension structure
+
+The syntax parsing is powered by [tree-sitter-fortran](https://github.com/stadelmanma/tree-sitter-fortran) by Matthew Stadelman.
+
+## Contributing
+
+Bug reports and feature requests are welcome on the [GitHub issue tracker](https://github.com/wmwolf/fortran-nova/issues).
+
+## License
+
+MIT License - see the repository for details.
