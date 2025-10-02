@@ -1,0 +1,12 @@
+Expected symbols (in order):
+1. test_program (program)
+2. test_module (module)
+3. my_subroutine (subroutine)
+4. my_function (function)
+5. types_module (module)
+6. my_type (type)
+
+NOT expected:
+- Any comments (lines starting with !)
+- Variable declarations
+- Procedure calls
