@@ -1,0 +1,17 @@
+{
+    "identifier": "com.wolfware.fortran",
+    "name": "Fortran",
+    "organization": "William Wolf",
+    "description": "Free-form Fortran (F90+) language support with syntax highlighting, symbol navigation, and code folding powered by tree-sitter.",
+    "version": "1.0.0",
+    "license": "MIT",
+    "repository": "https://github.com/wmwolf/fortran-nova",
+    "bugs": "https://github.com/wmwolf/fortran-nova/issues",
+    "categories": ["languages"],
+
+    "activationEvents": [
+        "onLanguage:fortran"
+    ],
+
+    "entitlements": {}
+}

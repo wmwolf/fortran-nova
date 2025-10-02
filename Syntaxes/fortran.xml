@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<syntax name="fortran">
+    <meta>
+        <name>Fortran</name>
+        <type>compiled</type>
+        <preferred-file-extension>f90</preferred-file-extension>
+    </meta>
+
+    <detectors>
+        <extension priority="1.0">f,f90,f95,f03,f08,dek,inc</extension>
+        <filename priority="1.0">inlist</filename>
+        <match-content lines="5" priority="0.8">
+            <starts-with>
+                <expression>\s*(?i:program|module|subroutine|function)</expression>
+            </starts-with>
+        </match-content>
+    </detectors>
+
+    <indentation>
+        <increase>
+            <expression>^\s*(?i:program|module|subroutine|function|type|interface|if|do|select\s+case|where|forall)\b</expression>
+        </increase>
+        <decrease>
+            <expression>^\s*(?i:end\s*(?:program|module|subroutine|function|type|interface|if|do|select|where|forall))\b</expression>
+        </decrease>
+    </indentation>
+
+    <comments>
+        <single>
+            <expression>!</expression>
+        </single>
+    </comments>
+
+    <brackets>
+        <pair open="(" close=")" />
+        <pair open="[" close="]" />
+    </brackets>
+
+    <surrounding-pairs>
+        <pair open="(" close=")" />
+        <pair open="[" close="]" />
+        <pair open="&quot;" close="&quot;" />
+        <pair open="&apos;" close="&apos;" />
+    </surrounding-pairs>
+
+    <tree-sitter language="fortran">
+        <highlights path="highlights.scm" />
+        <folds path="folds.scm" />
+        <symbols path="symbols.scm" />
+    </tree-sitter>
+</syntax>
