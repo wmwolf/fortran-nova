@@ -5,9 +5,8 @@
 ## Features
 
 - **Syntax Highlighting** - Full syntax highlighting for modern Fortran including keywords, types, operators, functions, subroutines, and more
-- **Symbol Navigation** - Quick navigation to programs, modules, subroutines, functions, and derived types via the symbol list (⌘P)
+- **Symbol Navigation** - Navigate to programs, modules, subroutines, and functions via the symbol list (⌘P)
 - **Code Folding** - Fold major code blocks including programs, modules, functions, subroutines, loops, and conditionals
-- **Smart Indentation** - Automatic indentation for Fortran block structures
 - **Comment Support** - Proper handling of Fortran comment syntax with `!`
 
 ## Supported File Types
