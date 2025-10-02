@@ -1,65 +1,32 @@
 ; Program blocks
-(program
-  (program_statement) @start
-  (end_program_statement) @end
-  (#set! role block))
+(program) @fold
 
 ; Module blocks
-(module
-  (module_statement) @start
-  (end_module_statement) @end
-  (#set! role block))
+(module) @fold
 
 ; Submodule blocks
-(submodule
-  (submodule_statement) @start
-  (end_submodule_statement) @end
-  (#set! role block))
+(submodule) @fold
 
 ; Subroutine blocks
-(subroutine
-  (subroutine_statement) @start
-  (end_subroutine_statement) @end
-  (#set! role function))
+(subroutine) @fold
 
 ; Function blocks
-(function
-  (function_statement) @start
-  (end_function_statement) @end
-  (#set! role function))
+(function) @fold
 
 ; Interface blocks
-(interface
-  (interface_statement) @start
-  (end_interface_statement) @end
-  (#set! role block))
+(interface) @fold
 
 ; Derived type blocks
-(derived_type_definition
-  (derived_type_statement) @start
-  (end_type_statement) @end
-  (#set! role struct))
+(derived_type_definition) @fold
 
 ; Do loop blocks
-(do_loop_statement
-  . @start
-  (end_do_statement) @end
-  (#set! role block))
+(do_loop_statement) @fold
 
 ; If blocks
-(if_statement
-  . @start
-  (end_if_statement) @end
-  (#set! role block))
+(if_statement) @fold
 
 ; Select case blocks
-(select_case_statement
-  . @start
-  (end_select_statement) @end
-  (#set! role block))
+(select_case_statement) @fold
 
 ; Where blocks
-(where_statement
-  . @start
-  (end_where_statement) @end
-  (#set! role block))
+(where_statement) @fold
