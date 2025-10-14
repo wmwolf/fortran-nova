@@ -1,6 +1,3 @@
-; Explicitly exclude comments from symbols
-(comment) @_comment
-
 ; Programs
 ((program
   (program_statement (name) @name)) @subtree
