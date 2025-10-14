@@ -24,9 +24,11 @@
   - Automated symbol detection validation
 
 ### Known Issues
-- Documentation comments (`!!`) appear as nested symbols in symbol navigator
-  - This is partially intended behavior for Doxygen-style documentation
-  - May be refined in future versions to exclude commented-out code blocks
+- Comments starting with `!!` appear as bookmark-style symbols in the symbol navigator
+  - This appears to be Nova-internal behavior that cannot be controlled via tree-sitter queries
+  - Affects both actual documentation comments and commented-out code blocks using `! !` pattern
+  - The actual program/module/function/subroutine symbols work correctly
+  - This is a minor cosmetic issue that does not affect core functionality
 
 ### Credits
 - Built with [Claude Code](https://claude.com/claude-code)
